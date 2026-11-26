@@ -1,0 +1,22 @@
+{
+  // Configuración de GitHub Codespaces / Dev Containers para DevAssistant
+  "name": "DevAssistant",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+  "postCreateCommand": "bash .github/codespaces/post-create.sh",
+  // Codespaces inyecta estos secrets como variables de entorno; dotenv no las sobrescribe con el .env
+  "secrets": {
+    "ANTHROPIC_API_KEY": {
+      "description": "API key de Anthropic (obligatoria: el agente usa Claude)",
+      "documentationUrl": "https://console.anthropic.com"
+    },
+    "OPENAI_API_KEY": {
+      "description": "API key de OpenAI (solo para los embeddings del RAG)",
+      "documentationUrl": "https://platform.openai.com/api-keys"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["bierner.markdown-mermaid"]
+    }
+  }
+}

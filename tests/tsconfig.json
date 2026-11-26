@@ -1,0 +1,12 @@
+{
+  // Solo para el typecheck de los tests (npm run typecheck); no emite nada
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "noEmit": true,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false
+  },
+  "include": ["../src/**/*", "./**/*"]
+}
